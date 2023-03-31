@@ -1,6 +1,7 @@
-../Src/main.c:44:5:main	8	static
-../Src/main.c:69:18:signal_mean	24	static
-../Src/main.c:82:18:signal_variance	32	static
-../Src/main.c:98:13:plot_input_signal	16	static
-../Src/main.c:107:13:pseudo_dly	24	static
-../Src/main.c:113:13:serial_plot_input_sig	16	static
+../Src/main.c:45:5:main	8	static
+../Src/main.c:73:18:signal_mean	24	static
+../Src/main.c:86:18:signal_variance	32	static
+../Src/main.c:102:18:signal_std	24	static
+../Src/main.c:109:13:plot_input_signal	16	static
+../Src/main.c:118:13:pseudo_dly	24	static
+../Src/main.c:124:13:serial_plot_input_sig	16	static
