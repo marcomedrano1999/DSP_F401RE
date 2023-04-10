@@ -42,6 +42,8 @@ float32_t g_meam_value;
 float32_t g_variance_value;
 float32_t g_std_value;
 
+float32_t g_std_value_CMSIS;
+
 int main(void)
 {
     //char data[] = "Hello from STM32...\n\n\r";
@@ -56,6 +58,7 @@ int main(void)
     g_variance_value = signal_variance((float32_t*)inputSignal_f32_1kHz_15kHz, (float32_t)g_meam_value, (uint32_t)KHZ1_15_SIG_LEN);
     g_std_value = signal_std(g_variance_value);
 
+    arm_std_f32(inputSignal_f32_1kHz_15kHz, KHZ1_15_SIG_LEN, &g_std_value_CMSIS);
 
     while(1)
     {
@@ -86,7 +89,6 @@ static float32_t signal_mean(float32_t *sig_src_arr, uint32_t sig_len)
 static float32_t signal_variance(float32_t *sig_src_arr, float32_t sig_mean, uint32_t sig_len)
 {
 	float32_t _variance = 0;
-
 
 	for(uint32_t i=0;i<sig_len; i++)
 	{
